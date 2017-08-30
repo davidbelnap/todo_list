@@ -12,13 +12,17 @@ class ItemsController < ApplicationController
   end
 
   def create
-  	@item = Item.new(item_params)
+  	@item = Item.new(items_params)
 
   	if @item.save
   		redirect_to items_path
   	else
   		render :new
   	end
+  end
+
+  def edit
+    @item = Item.find(params[:id])
   end
 
   private

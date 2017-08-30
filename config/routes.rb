@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-	root 'items#index'
+  root 'static_items#home'
+
+  get '/about', to: 'static_items#about'
+
+	# root 'items#index'
 	resources :items
 
 
