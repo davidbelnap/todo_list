@@ -1,2 +1,4 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<h1><%= @item.title %></h1>
+<h4><%= @item.user %></h4>
+<p><%= @item.body %></p>
+<%= link_to 'Back', items_path %>
